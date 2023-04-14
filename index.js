@@ -10,7 +10,7 @@ app.use(express.urlencoded({limit: '25mb'}));
 
 app.use(cors())
 app.use('/post',postRouter)
-app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({ extended: undefined }));
 mongoose.connect('mongodb+srv://Sushant:Sushant@cluster0.8b6d3ml.mongodb.net/Instaclone?retryWrites=true&w=majority',(err)=>{
     if(err){
         console.log(err)
