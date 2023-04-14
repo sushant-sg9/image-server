@@ -14,7 +14,6 @@ cloudinary.config({
 })
 
 
-
 router.get('/',async(req,res)=>{
     try{
         const data=await insta.find().sort({_id:-1})
